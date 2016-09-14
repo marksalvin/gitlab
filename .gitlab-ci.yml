@@ -1,0 +1,10 @@
+image: risingstack/alpine:3.3-v6.2.0-3.6.0
+
+stages:
+  - test
+
+job_test:
+  stage: test
+  script:
+    - npm --production=false install
+    - npm run test
